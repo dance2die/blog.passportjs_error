@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon ./index.js",
-    "debugstart": "SET DEBUG=passport_auth_manual:* && yarn start",
-    "prodstart": "SET NODE_ENV=production&&yarn start"
+    "debugstart": "SET DEBUG=passport_auth_manual:* && yarn start"
   },
   "keywords": [],
   "author": "",
