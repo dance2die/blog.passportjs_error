@@ -1,0 +1,26 @@
+{
+  "name": "passport_auth_manual",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon ./index.js",
+    "debugstart": "SET DEBUG=passport_auth_manual:* && yarn start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "debug": "^3.1.0",
+    "dotenv": "^4.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "mongoose": "^5.0.1",
+    "nodemon": "^1.14.11",
+    "passport": "^0.4.0",
+    "passport-meetup": "^1.0.0"
+  }
+}
