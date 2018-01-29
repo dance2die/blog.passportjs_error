@@ -17,13 +17,14 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
 // set up express session
+const sessionCookieSecureValue = process.env.NODE_ENV == "production" ? true : false;
 app.use(
   session({
     secret: "some secret",
     resave: true,
     saveUninitialized: true,
     cookie: {
-      secure: "false"
+      secure: sessionCookieSecureValue
     }
   })
 );

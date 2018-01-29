@@ -1,6 +1,7 @@
 const passport = require("passport");
 const MeetupStrategy = require("passport-meetup");
 const debug = require("debug")("passport_auth_manual:meetup.strategy");
+// Import Enviroment variables from ".env" file.
 require('dotenv').config({path: '.env'});
 
 module.exports = function(app) {
@@ -11,11 +12,6 @@ module.exports = function(app) {
   };
 
   function onAuthentication(token, tokenSecret, profile, done) {
-    const {MEETUP_API_CONSUMER_KEY, MEETUP_API_CONSUMER_SECRET} = process.env;
-    debug("====== keys ======", MEETUP_API_CONSUMER_KEY, MEETUP_API_CONSUMER_SECRET);
-    // debug(`token => ${token}`);
-    // debug(`tokenSecret => ${tokenSecret}`);
-    // debug(`profile => ${profile}`);
     done(null, profile);
   }
 
